@@ -33,9 +33,9 @@ public struct RecoveryMiddleware: Middleware {
         self.recover = recover
     }
 
-    public func respond(request: Request, chain: Responder) throws -> Response {
+    public func respond(to request: Request, chainingTo chain: Responder) throws -> Response {
         do {
-            return try chain.respond(request)
+            return try chain.respond(to: request)
         } catch {
             return try recover(error)
         }
