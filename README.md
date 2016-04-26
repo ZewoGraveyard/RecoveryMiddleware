@@ -23,7 +23,7 @@ enum CustomError: ErrorProtocol {
 
 let recover = RecoveryMiddleware { error in
 	switch error {
-	case CustomError.somethingBadHappend:
+	case CustomError.somethingBadHappened:
 	    return Response(body: "something bad happened")
 	default:
 	    return Response(status: .internalServerError)
