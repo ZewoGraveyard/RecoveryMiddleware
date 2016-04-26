@@ -8,7 +8,7 @@ class RecoveryMiddlewareTests: XCTestCase {
 }
 
 extension RecoveryMiddlewareTests {
-    static var allTests : [(String, RecoveryMiddlewareTests -> () throws -> Void)] {
+    static var allTests: [(String, RecoveryMiddlewareTests -> () throws -> Void)] {
         return [
            ("testReality", testReality),
         ]
