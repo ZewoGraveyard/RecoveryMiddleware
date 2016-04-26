@@ -11,14 +11,14 @@
 **RecoveryMiddleware** provides a nice way to recover from errors in your middleware chain.
 
 ## Usage
- 
+
 ```swift
 import RecoveryMiddleware
 import HTTPServer
 import Router
 
 enum CustomError: ErrorProtocol {
-    case somethingBadHappend
+    case somethingBadHappened
 }
 
 let recover = RecoveryMiddleware { error in
