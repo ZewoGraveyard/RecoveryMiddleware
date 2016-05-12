@@ -24,7 +24,7 @@
 
 @_exported import S4
 
-public typealias Recover = ErrorProtocol throws -> Response
+public typealias Recover = (ErrorProtocol) throws -> Response
 
 public struct RecoveryMiddleware: Middleware {
     let recover: Recover
