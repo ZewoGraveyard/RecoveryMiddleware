@@ -24,12 +24,10 @@
 
 @_exported import S4
 
-public typealias Recover = (ErrorProtocol) throws -> Response
-
 public struct RecoveryMiddleware: Middleware {
-    let recover: Recover
+    let recover: (ErrorProtocol) throws -> Response
 
-    public init(_ recover: Recover) {
+    public init(_ recover: (ErrorProtocol) throws -> Response) {
         self.recover = recover
     }
 
